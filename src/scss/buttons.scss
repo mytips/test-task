@@ -1,0 +1,35 @@
+.slick {
+	&-arrow {
+		background:transparent url('../images/arrows.png') no-repeat;
+		width: 19px;
+		height: 71px;
+		border: none;
+		background-position: 0 0;
+		font-size: 0;
+		cursor: pointer;
+		position: absolute;
+		left: 37px;
+		top: 50%;
+		margin-top: -35px;
+		opacity: 1;
+		transition: opacity .3s;
+
+		&:hover {
+			opacity: .5;
+		}
+
+		@media (max-width: 520px) {
+			left: 0;
+		}
+	}
+
+	&-next {
+		background-position: 100% 0;
+		left: auto;
+		right: 37px;
+
+		@media (max-width: 520px) {
+			right: 0;
+		}
+	}
+}

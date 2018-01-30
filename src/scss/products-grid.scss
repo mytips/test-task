@@ -1,0 +1,23 @@
+.products-list {
+	float: left;
+	width: 100%;
+	padding: 0 95px;
+	position: relative;
+	margin-bottom: 100px;
+
+	@media (max-width: 580px) {
+		max-width: 480px;
+		margin: 0 auto 100px;
+		float: none;
+	}
+
+	@media (max-width: 420px) {
+		padding: 0 30px;
+	}
+}
+
+.product {
+	width: 25%;
+	padding: 0 5px;
+	float: left;
+}

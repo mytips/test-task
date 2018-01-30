@@ -1,0 +1,12 @@
+hedaer.header
+	.content
+		a.header-logo(href="/") 
+			img(src="images/logo.png", alt="IQStore")
+	nav.header-navigation
+		.content
+			input.menu-checkbox(id="menu-checkbox" type="checkbox")
+			label.menu-button(for="menu-checkbox")
+			ul.header-menu
+				each val in ['New arrivals', 'Collections', 'Shoes', 'Bags', 'Lingerie']
+					li.header-menu-item
+						a.header-menu-link(href="#")= val

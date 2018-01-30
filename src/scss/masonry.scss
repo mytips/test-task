@@ -1,0 +1,72 @@
+.masonry {
+	margin-top: 35px;
+	margin-bottom: 50px;
+	opacity: 0;
+	transition: opacity 0.15s;
+	min-height: 600px;
+
+	@media (max-width: 991px) {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 320px;
+	}
+
+	@media (max-width: 520px) {
+		margin-top: 20px;
+	}
+
+	.grid {
+		margin: 0 -4px;
+
+		@media (max-width: 991px) {
+			width: 485px;
+		}
+
+		@media (max-width: 520px) {
+			width: 300px;
+			margin: 0;
+		}
+	}
+
+	.grid-sizer {
+		width:1px;
+	}
+
+	.grid-item {
+		width: 475px;
+		max-width: 100%;
+		display: block;
+		margin: 0 5px 10px;
+		font-size: 0;
+		margin-bottom: 10px;
+
+		@media (max-width: 520px) {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.grid-item--width2 {
+		width: 185px;
+		margin: 0 5px 10px;
+
+		@media (max-width: 520px) {
+			width: 115px;
+			margin-left: 0;
+			margin-right: 5px;
+		}
+	}
+
+	.grid-item--width3 {
+		width: 278px;
+		margin: 0 5px 10px;
+
+		@media (max-width: 520px) {
+			width: 175px;
+			margin-right: 0;
+			margin-left: 5px;
+		}
+	}
+}

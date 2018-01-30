@@ -1,0 +1,31 @@
+a.product(href="#")
+	img.product-image(src=`images/${product.image}`)
+	.product-info
+		.product-row
+			h2.product-title= product.name
+			.product-price
+				span.smaller= product.currency
+
+				if product.salePrice
+					- var banknotes = product.salePrice.substring(0, product.salePrice.indexOf(".")) 
+					- var coins = product.salePrice.substring(product.salePrice.indexOf(".") + 1)
+				else
+					- var banknotes = product.price.substring(0, product.price.indexOf("."))
+					- var coins = product.price.substring(product.price.indexOf(".") + 1)
+
+				span= `${banknotes}.`
+				span.product-coins.small= coins
+
+		if product.salePrice
+
+			.product-row
+
+				-var discount = (product.price - product.salePrice).toFixed(2)
+				-var discountPercents = (product.price - product.salePrice).toFixed()
+
+				.product-discount= `Save: ${product.currency}${discount} (${discountPercents}%)`
+				.product-price--sale
+					span.currency= product.currency
+					span.strikethrough= product.price
+				.product-sale-badge
+			.sale-badge sale
